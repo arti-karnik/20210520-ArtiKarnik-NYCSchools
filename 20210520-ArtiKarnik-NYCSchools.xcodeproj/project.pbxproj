@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D30EF262658243E00BF657E /* nySchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF252658243E00BF657E /* nySchoolTableViewCell.swift */; };
+		4D30EF2A26582CFD00BF657E /* NYSAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF2926582CFD00BF657E /* NYSAT.swift */; };
 		4D676E842657403900DCFCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E832657403900DCFCFF /* AppDelegate.swift */; };
 		4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E852657403900DCFCFF /* SceneDelegate.swift */; };
 		4D676E8B2657403900DCFCFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D676E892657403900DCFCFF /* Main.storyboard */; };
@@ -16,7 +18,6 @@
 		4D676EA8265742DD00DCFCFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676EA7265742DD00DCFCFF /* HomeViewController.swift */; };
 		4D676EAA2657438A00DCFCFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676EA92657438A00DCFCFF /* DetailViewController.swift */; };
 		4D676EAC265754CE00DCFCFF /* NYSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676EAB265754CE00DCFCFF /* NYSchool.swift */; };
-		4DF93B4426581ABA00BB65EC /* Custom Cell in Resources */ = {isa = PBXBuildFile; fileRef = 4DF93B4326581ABA00BB65EC /* Custom Cell */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D30EF252658243E00BF657E /* nySchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nySchoolTableViewCell.swift; sourceTree = "<group>"; };
+		4D30EF2926582CFD00BF657E /* NYSAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSAT.swift; sourceTree = "<group>"; };
 		4D676E802657403900DCFCFF /* 20210520-ArtiKarnik-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20210520-ArtiKarnik-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D676E832657403900DCFCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D676E852657403900DCFCFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +46,6 @@
 		4D676EA7265742DD00DCFCFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4D676EA92657438A00DCFCFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4D676EAB265754CE00DCFCFF /* NYSchool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSchool.swift; sourceTree = "<group>"; };
-		4DF93B4326581ABA00BB65EC /* Custom Cell */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Custom Cell"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D30EF2726582AA200BF657E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D30EF2826582AA900BF657E /* CustomCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D30EF2826582AA900BF657E /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D30EF252658243E00BF657E /* nySchoolTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		4D676E772657403900DCFCFF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +103,7 @@
 		4D676E822657403900DCFCFF /* 20210520-ArtiKarnik-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				4D30EF2726582AA200BF657E /* Views */,
 				4D676EA62657415900DCFCFF /* Modal */,
 				4D676EA52657415000DCFCFF /* Controller */,
 				4D676E832657403900DCFCFF /* AppDelegate.swift */,
@@ -109,7 +128,6 @@
 		4D676EA52657415000DCFCFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4DF93B4326581ABA00BB65EC /* Custom Cell */,
 				4D676EA7265742DD00DCFCFF /* HomeViewController.swift */,
 				4D676EA92657438A00DCFCFF /* DetailViewController.swift */,
 			);
@@ -120,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				4D676EAB265754CE00DCFCFF /* NYSchool.swift */,
+				4D30EF2926582CFD00BF657E /* NYSAT.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -207,7 +226,6 @@
 			files = (
 				4D676E902657403A00DCFCFF /* LaunchScreen.storyboard in Resources */,
 				4D676E8D2657403A00DCFCFF /* Assets.xcassets in Resources */,
-				4DF93B4426581ABA00BB65EC /* Custom Cell in Resources */,
 				4D676E8B2657403900DCFCFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +248,8 @@
 				4D676EAC265754CE00DCFCFF /* NYSchool.swift in Sources */,
 				4D676EAA2657438A00DCFCFF /* DetailViewController.swift in Sources */,
 				4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */,
+				4D30EF262658243E00BF657E /* nySchoolTableViewCell.swift in Sources */,
+				4D30EF2A26582CFD00BF657E /* NYSAT.swift in Sources */,
 				4D676EA8265742DD00DCFCFF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

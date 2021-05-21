@@ -9,13 +9,34 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet var dbn: UILabel!
+    @IBOutlet var criticalSATscore: UILabel!
+    @IBOutlet var noOfSATtakers: UILabel!
+    @IBOutlet var mathAvgSATscore: UILabel!
+    @IBOutlet var writingAvgSATscore: UILabel!
+    @IBOutlet var schoolName: UILabel!
+    var nySAT: [NYSAT]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .green
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if nySAT != nil && nySAT!.count > 0 {
+            showdetails(nySAT!)
+        }
+    }
     
-
+    func showdetails(_ nySAT: [NYSAT]) {
+        print("in details")
+        print(nySAT)
+        dbn.text = nySAT[0].dbn
+        schoolName.text = nySAT[0].schoolName
+        mathAvgSATscore.text = nySAT[0].SATmathAvgScore
+        criticalSATscore.text = nySAT[0].SATcriticalReadingAvgScore
+        noOfSATtakers.text = nySAT[0].SATtakers
+        writingAvgSATscore.text = nySAT[0].SATwritingAvgScore
+    }
     /*
     // MARK: - Navigation
 
