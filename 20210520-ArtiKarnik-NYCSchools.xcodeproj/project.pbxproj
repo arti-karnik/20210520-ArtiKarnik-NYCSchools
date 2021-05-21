@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		4D676E842657403900DCFCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E832657403900DCFCFF /* AppDelegate.swift */; };
 		4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E852657403900DCFCFF /* SceneDelegate.swift */; };
-		4D676E882657403900DCFCFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E872657403900DCFCFF /* ViewController.swift */; };
 		4D676E8B2657403900DCFCFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D676E892657403900DCFCFF /* Main.storyboard */; };
 		4D676E8D2657403A00DCFCFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D676E8C2657403A00DCFCFF /* Assets.xcassets */; };
 		4D676E902657403A00DCFCFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D676E8E2657403A00DCFCFF /* LaunchScreen.storyboard */; };
 		4D676E9B2657403A00DCFCFF /* _0210520_ArtiKarnik_NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E9A2657403A00DCFCFF /* _0210520_ArtiKarnik_NYCSchoolsUITests.swift */; };
+		4D676EA8265742DD00DCFCFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676EA7265742DD00DCFCFF /* HomeViewController.swift */; };
+		4D676EAA2657438A00DCFCFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676EA92657438A00DCFCFF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,6 @@
 		4D676E802657403900DCFCFF /* 20210520-ArtiKarnik-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20210520-ArtiKarnik-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D676E832657403900DCFCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D676E852657403900DCFCFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D676E872657403900DCFCFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D676E8A2657403900DCFCFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D676E8C2657403A00DCFCFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D676E8F2657403A00DCFCFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		4D676E962657403A00DCFCFF /* 20210520-ArtiKarnik-NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20210520-ArtiKarnik-NYCSchoolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D676E9A2657403A00DCFCFF /* _0210520_ArtiKarnik_NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0210520_ArtiKarnik_NYCSchoolsUITests.swift; sourceTree = "<group>"; };
 		4D676E9C2657403A00DCFCFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D676EA7265742DD00DCFCFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4D676EA92657438A00DCFCFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,10 @@
 		4D676E822657403900DCFCFF /* 20210520-ArtiKarnik-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				4D676EA62657415900DCFCFF /* Modal */,
+				4D676EA52657415000DCFCFF /* Controller */,
 				4D676E832657403900DCFCFF /* AppDelegate.swift */,
 				4D676E852657403900DCFCFF /* SceneDelegate.swift */,
-				4D676E872657403900DCFCFF /* ViewController.swift */,
 				4D676E892657403900DCFCFF /* Main.storyboard */,
 				4D676E8C2657403A00DCFCFF /* Assets.xcassets */,
 				4D676E8E2657403A00DCFCFF /* LaunchScreen.storyboard */,
@@ -97,6 +100,22 @@
 				4D676E9C2657403A00DCFCFF /* Info.plist */,
 			);
 			path = "20210520-ArtiKarnik-NYCSchoolsUITests";
+			sourceTree = "<group>";
+		};
+		4D676EA52657415000DCFCFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D676EA7265742DD00DCFCFF /* HomeViewController.swift */,
+				4D676EA92657438A00DCFCFF /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4D676EA62657415900DCFCFF /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D676E882657403900DCFCFF /* ViewController.swift in Sources */,
 				4D676E842657403900DCFCFF /* AppDelegate.swift in Sources */,
+				4D676EAA2657438A00DCFCFF /* DetailViewController.swift in Sources */,
 				4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */,
+				4D676EA8265742DD00DCFCFF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
