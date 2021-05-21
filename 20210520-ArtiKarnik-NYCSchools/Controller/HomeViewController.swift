@@ -43,9 +43,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return nySchoolList?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.nySchoolList?[indexPath.row].schoolName
-        cell.backgroundColor = .red
-        return cell
+    // let object: NYCSchoolModelView = dataObject.arrNYCSchools[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "schoolCell", for: indexPath) as? nySchoolCell {
+                cell.dataObject = nySchoolList
+                return cell
+            }
+            return UITableViewCell()
     }
 }
