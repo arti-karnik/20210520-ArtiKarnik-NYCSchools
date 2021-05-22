@@ -12,7 +12,7 @@ import Foundation
 
 class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     var searching = false
-
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tblView: UITableView!
 
@@ -23,13 +23,16 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
     var modalObject: NYCSchoolModelView = NYCSchoolModelView()
     
     override func viewDidLoad() {
+        activityIndicator.startAnimating()
+        activityIndicator.color = .black
+        self.view.addSubview(activityIndicator)
+        
         super.viewDidLoad()
         self.navigationItem.title = "NYC School"
         tblView.delegate = self
         tblView.dataSource = self
         searchBar.delegate = self
         tblView.rowHeight = UITableView.automaticDimension
-        
         getSchoolData()
     }
     func getSchoolData() {
@@ -43,6 +46,7 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
                     DispatchQueue.main.async{
                         self.nySchoolList = data
                         self.tblView.reloadData()
+                        self.activityIndicator.stopAnimating()
                     }
                 case .failure(let error):
                     self.alert(error.localizedDescription)
