@@ -4,6 +4,7 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var nySchoolInfo: [NYSchool]?
+    var locationObj: location = location()
 
     @IBOutlet weak var Map: MKMapView! {
         didSet {
@@ -17,26 +18,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateView()
+        addAnnotation()
     }
 }
 
 extension MapViewController {
-    func updateView() {
-        
-        if let latitudeDouble = nySchoolInfo?[0].latitude, let longitudeDouble = nySchoolInfo?[0].longitude {
+    
+    func addAnnotation()  {
       
-            let location = CLLocationCoordinate2D(latitude: CLLocationDegrees(Double(latitudeDouble) ?? 0.0), longitude: CLLocationDegrees(Double(longitudeDouble) ?? 0.0))
-            
-            let CLLCoordType = CLLocationCoordinate2D(latitude: location.latitude,longitude: location.longitude);
-            let anno = MKPointAnnotation();
-            anno.coordinate = CLLCoordType;
-            anno.title = nySchoolInfo?[0].schoolName
-            self.Map.addAnnotation(anno);
-            
-            Map.layoutMargins = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
-            Map.showAnnotations(Map.annotations, animated: true)
-        }
+        let annotation = locationObj.createAnnotation(latitude: nySchoolInfo?[0].latitude ?? "0.0", longitude: nySchoolInfo?[0].longitude ?? "0.0", title: nySchoolInfo?[0].schoolName ?? "")
+        self.Map.addAnnotation(annotation);
+                 
+        Map.layoutMargins = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
+        Map.showAnnotations(Map.annotations, animated: true)
         
     }
 }

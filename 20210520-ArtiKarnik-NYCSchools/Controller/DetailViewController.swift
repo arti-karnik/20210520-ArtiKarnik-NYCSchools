@@ -25,6 +25,7 @@ class DetailViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         schoolName.text = nySchoolInfo?[0].schoolName
+        self.navigationItem.title = nySchoolInfo?[0].schoolName
         if nySAT != nil && nySAT!.count > 0 {
             showdetails(nySAT!)
         }

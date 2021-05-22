@@ -16,7 +16,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="IbI-Ja-beY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -43,7 +44,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-rW-hvb">
                                 <rect key="frame" x="0.0" y="60" width="375" height="563"/>
-                                <color key="backgroundColor" red="1" green="0.80919708840000004" blue="0.6256240019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="nvX-5n-Ia0">
                                     <rect key="frame" x="0.0" y="176" width="375" height="44"/>
@@ -107,7 +108,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.80919708840000004" blue="0.6256240019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="Icu-pb-mkK" firstAttribute="leading" secondItem="7Zg-oa-A9O" secondAttribute="leading" constant="5" id="0mp-PQ-Jun"/>
                                                         <constraint firstItem="UWX-x4-vJo" firstAttribute="leading" secondItem="7Zg-oa-A9O" secondAttribute="leading" constant="5" id="2SU-1m-DXa"/>
@@ -137,7 +138,7 @@ layer.masksToBounds</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.80919708840000004" blue="0.6256240019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="7Zg-oa-A9O" firstAttribute="top" secondItem="fyS-uK-ti1" secondAttribute="top" constant="10" id="Lcg-Ya-B7k"/>
                                                 <constraint firstAttribute="trailing" secondItem="7Zg-oa-A9O" secondAttribute="trailing" id="U3D-iW-bDh"/>
@@ -145,7 +146,7 @@ layer.masksToBounds</string>
                                                 <constraint firstAttribute="bottom" secondItem="7Zg-oa-A9O" secondAttribute="bottom" constant="10" id="zuu-cj-VLm"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.80919708843487903" blue="0.62562400193563739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <viewLayoutGuide key="safeArea" id="DaD-My-sgr"/>
                                         <connections>
                                             <outlet property="schoolAddress" destination="Icu-pb-mkK" id="v9f-2Q-dR2"/>
@@ -166,7 +167,7 @@ layer.masksToBounds</string>
                                     <constraint firstAttribute="height" constant="50" id="Cjr-GD-qwh"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" red="0.66432853970000005" green="0.74264448719999998" blue="0.8871282935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
@@ -208,17 +209,17 @@ layer.masksToBounds</string>
             <objects>
                 <viewController storyboardIdentifier="DetailView" interfaceStyle="dark" id="46g-yA-FBX" customClass="DetailViewController" customModule="_0210520_ArtiKarnik_NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MYx-uE-A4w">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jda-h2-4Ih">
-                                <rect key="frame" x="10" y="10" width="355" height="23"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="19"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="10" y="54" width="355" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dbn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BX3-1n-m4N">
-                                <rect key="frame" x="10" y="43" width="33" height="30"/>
+                                <rect key="frame" x="10" y="87" width="33" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Jj6-Tt-4pm"/>
@@ -228,14 +229,14 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="O1M2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06F-HJ-6XH">
-                                <rect key="frame" x="53" y="43" width="42" height="30"/>
+                                <rect key="frame" x="53" y="87" width="42" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="363" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-LF-M2H">
-                                <rect key="frame" x="290" y="203" width="26.5" height="30"/>
+                                <rect key="frame" x="290" y="247" width="26.5" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="S8F-rw-Mp7"/>
@@ -245,14 +246,14 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="SAT critical reading average score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="syB-gt-vEg">
-                                <rect key="frame" x="10" y="83" width="272" height="19"/>
+                                <rect key="frame" x="10" y="127" width="272" height="19"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT Math Average Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kkR-d0-gcI">
-                                <rect key="frame" x="10" y="112" width="270" height="30"/>
+                                <rect key="frame" x="10" y="156" width="270" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="S3F-oo-Nrv"/>
@@ -263,7 +264,7 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="355" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJh-fP-k0d">
-                                <rect key="frame" x="290" y="123" width="27" height="30"/>
+                                <rect key="frame" x="290" y="167" width="27" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9cN-Zk-wVP"/>
@@ -273,7 +274,7 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT writing average score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Hmg-CN-9Bi">
-                                <rect key="frame" x="10" y="152" width="212.5" height="30"/>
+                                <rect key="frame" x="10" y="196" width="212.5" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9oB-Qg-sFC"/>
@@ -283,7 +284,7 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No of SAT Takers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="R61-Ij-aes">
-                                <rect key="frame" x="10" y="192" width="139.5" height="30"/>
+                                <rect key="frame" x="10" y="236" width="139.5" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="njQ-g6-i7X"/>
@@ -293,7 +294,7 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="405" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdL-3V-IlL">
-                                <rect key="frame" x="290" y="163" width="28" height="30"/>
+                                <rect key="frame" x="290" y="207" width="28" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iUi-nI-I62"/>
@@ -303,7 +304,7 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="470" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLQ-ee-SHZ">
-                                <rect key="frame" x="290" y="83" width="26.5" height="30"/>
+                                <rect key="frame" x="290" y="127" width="26.5" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="W26-uh-el3"/>
@@ -313,7 +314,7 @@ layer.masksToBounds</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa4-jf-Wjf">
-                                <rect key="frame" x="20" y="253" width="335" height="60"/>
+                                <rect key="frame" x="20" y="297" width="335" height="60"/>
                                 <color key="backgroundColor" red="0.26695811749999998" green="0.70221024750000005" blue="0.95955318209999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="her-9L-3yf"/>
@@ -327,7 +328,7 @@ layer.masksToBounds</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80919708840000004" blue="0.6256240019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kkR-d0-gcI" firstAttribute="top" secondItem="syB-gt-vEg" secondAttribute="bottom" constant="10" id="1S7-ib-7a3"/>
@@ -372,12 +373,7 @@ layer.masksToBounds</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7df-dG-OxY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ds6-ly-n0X">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="3nQ-jt-Fao">
-                            <color key="tintColor" red="0.93751806019999995" green="0.56380927560000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="criticalSATscore" destination="OLQ-ee-SHZ" id="wgD-VT-HXC"/>
                         <outlet property="dbn" destination="06F-HJ-6XH" id="2u0-tD-phI"/>
@@ -399,18 +395,27 @@ layer.masksToBounds</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Scd-fZ-OND">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="909"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Scd-fZ-OND">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
                                     <outlet property="delegate" destination="aue-U4-wKF" id="TOB-dJ-iYP"/>
                                 </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Scd-fZ-OND" firstAttribute="top" secondItem="2GX-y8-R3e" secondAttribute="top" constant="20" id="NpW-Dp-nVR"/>
+                            <constraint firstItem="Scd-fZ-OND" firstAttribute="leading" secondItem="2GX-y8-R3e" secondAttribute="leading" id="RHX-Dj-yRg"/>
+                            <constraint firstAttribute="bottom" secondItem="Scd-fZ-OND" secondAttribute="bottom" id="UMt-XB-rNM"/>
+                            <constraint firstAttribute="trailing" secondItem="Scd-fZ-OND" secondAttribute="trailing" id="oIv-LZ-2T6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2GX-y8-R3e"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jnh-Dg-qgg"/>
+                    <navigationItem key="navigationItem" id="ZmG-Gz-b4y">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QUY-OM-a7I">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="Map" destination="Scd-fZ-OND" id="4Ew-ua-hGr"/>
                     </connections>

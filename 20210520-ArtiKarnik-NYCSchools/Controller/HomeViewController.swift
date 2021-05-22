@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 
-class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var searching = false
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var searchBar: UISearchBar!
@@ -23,10 +23,6 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
     var modalObject: NYCSchoolModelView = NYCSchoolModelView()
     
     override func viewDidLoad() {
-        activityIndicator.startAnimating()
-        activityIndicator.color = .black
-        self.view.addSubview(activityIndicator)
-        
         super.viewDidLoad()
         self.navigationItem.title = "NYC School"
         tblView.delegate = self
@@ -96,7 +92,6 @@ extension HomeViewController  {
         let dbn = nySchoolList?[indexPath.row].dbn
         let dictionary = nySAT?.filter{ $0.dbn == dbn}
         let schoolInfo = nySchoolList?.filter{ $0.dbn == dbn}
-        print(schoolInfo)
         let ctrl = self.storyboard?.instantiateViewController(withIdentifier: "DetailView") as? DetailViewController
         ctrl?.nySAT = dictionary
         ctrl?.nySchoolInfo = schoolInfo
@@ -104,11 +99,11 @@ extension HomeViewController  {
     }
 }
 
-extension HomeViewController: UISearchBarDelegate {
+extension HomeViewController {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searching = true
-        searchResults = nySchoolList?.filter{ $0.schoolName.contains(searchText) }
         tblView.reloadData()
+        searchResults = modalObject.filterResults(searchText, nySchoolList!)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
