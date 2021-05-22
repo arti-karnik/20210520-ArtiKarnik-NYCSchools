@@ -18,11 +18,13 @@ class DetailViewController: UIViewController {
     @IBOutlet var writingAvgSATscore: UILabel!
     
     var nySAT: [NYSchool]?
+    var nySchoolInfo: [NYSchool]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
+        schoolName.text = nySchoolInfo?[0].schoolName
         if nySAT != nil && nySAT!.count > 0 {
             showdetails(nySAT!)
         }
@@ -31,10 +33,14 @@ class DetailViewController: UIViewController {
     func showdetails(_ nySAT: [NYSchool]) {
         print(nySAT)
         dbn.text = nySAT[0].dbn
-        schoolName.text = nySAT[0].schoolName
         mathAvgSATscore.text = nySAT[0].SATmathAvgScore
         criticalSATscore.text = nySAT[0].SATcriticalReadingAvgScore
         noOfSATtakers.text = nySAT[0].SATtakers
         writingAvgSATscore.text = nySAT[0].SATwritingAvgScore
+    }
+    @IBAction func showMap(_ sender: Any) {
+    let mapVC = self.storyboard?.instantiateViewController(withIdentifier: "MapView") as? MapViewController
+        mapVC?.nySchoolInfo = nySchoolInfo
+        self.navigationController?.pushViewController(mapVC!, animated: true)
     }
 }

@@ -11,6 +11,8 @@ struct NYSchool: Codable, Hashable{
     var startTime: String;
     var endTime: String;
     var fullAddress: String;
+    var latitude: String;
+    var longitude: String;
     var website: String;
     var SATtakers: String;
     var SATcriticalReadingAvgScore: String;
@@ -29,6 +31,8 @@ struct NYSchool: Codable, Hashable{
         case startTime = "start_time"
         case endTime = "end_time"
         case website = "website"
+        case latitude = "latitude"
+        case longitude = "longitude"
         case SATtakers = "num_of_sat_test_takers"
         case SATcriticalReadingAvgScore = "sat_critical_reading_avg_score"
         case SATmathAvgScore = "sat_math_avg_score"
@@ -44,6 +48,8 @@ struct NYSchool: Codable, Hashable{
         city        =  (try container.decodeIfPresent(String.self, forKey: .city)) ?? "NA"
         state       =  (try container.decodeIfPresent(String.self, forKey: .state)) ?? "NA"
         website     =  (try container.decodeIfPresent(String.self, forKey: .website)) ?? "NA"
+        latitude     =  (try container.decodeIfPresent(String.self, forKey: .latitude)) ?? "NA"
+        longitude     =  (try container.decodeIfPresent(String.self, forKey: .longitude)) ?? "NA"
         zip         = (try container.decodeIfPresent(String.self, forKey: .zip)) ?? "NA"
         startTime   = (try container.decodeIfPresent(String.self, forKey: .startTime)) ?? "NA"
         endTime     = (try container.decodeIfPresent(String.self, forKey: .endTime)) ?? "NA"

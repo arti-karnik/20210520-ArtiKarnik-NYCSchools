@@ -28,6 +28,8 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
         tblView.delegate = self
         tblView.dataSource = self
         searchBar.delegate = self
+        tblView.rowHeight = UITableView.automaticDimension
+        
         getSchoolData()
     }
     func getSchoolData() {
@@ -76,9 +78,7 @@ extension HomeViewController  {
             return nySchoolList?.count ?? 0
         }
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! nySchoolTableViewCell
         if searching {
@@ -91,8 +91,11 @@ extension HomeViewController  {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dbn = nySchoolList?[indexPath.row].dbn
         let dictionary = nySAT?.filter{ $0.dbn == dbn}
+        let schoolInfo = nySchoolList?.filter{ $0.dbn == dbn}
+        print(schoolInfo)
         let ctrl = self.storyboard?.instantiateViewController(withIdentifier: "DetailView") as? DetailViewController
         ctrl?.nySAT = dictionary
+        ctrl?.nySchoolInfo = schoolInfo
         self.navigationController?.pushViewController(ctrl!, animated: true)
     }
 }

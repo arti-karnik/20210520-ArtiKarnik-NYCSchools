@@ -12,15 +12,11 @@ class nySchoolTableViewCell: UITableViewCell {
 
     @IBOutlet var schoolName: UILabel!
     @IBOutlet var schoolAddress: UILabel!
-
     @IBOutlet var schoolPhone: UILabel!
     @IBOutlet var website: UILabel!
     var cellContent: NYSchool!
    
     override func awakeFromNib() {
-        self.backgroundColor = .clear;
-        self.contentView.layer.cornerRadius = 5;
-        self.contentView.layer.masksToBounds = true;
         super.awakeFromNib()
     }
     func configure(_ nyschool: NYSchool) {

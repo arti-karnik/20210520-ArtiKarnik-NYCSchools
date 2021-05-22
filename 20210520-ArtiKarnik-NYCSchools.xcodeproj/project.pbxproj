@@ -11,6 +11,8 @@
 		4D30EF332658503200BF657E /* NetworkManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF322658503200BF657E /* NetworkManage.swift */; };
 		4D30EF392658613C00BF657E /* NYCSchoolModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF382658613C00BF657E /* NYCSchoolModelView.swift */; };
 		4D30EF3E2658968D00BF657E /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF3D2658968D00BF657E /* global.swift */; };
+		4D4340542659A31C004AC3C3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4340532659A31C004AC3C3 /* MapViewController.swift */; };
+		4D4340562659AA17004AC3C3 /* NYSchoolLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4340552659AA17004AC3C3 /* NYSchoolLocation.swift */; };
 		4D676E842657403900DCFCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E832657403900DCFCFF /* AppDelegate.swift */; };
 		4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E852657403900DCFCFF /* SceneDelegate.swift */; };
 		4D676E8B2657403900DCFCFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D676E892657403900DCFCFF /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		4D30EF322658503200BF657E /* NetworkManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManage.swift; sourceTree = "<group>"; };
 		4D30EF382658613C00BF657E /* NYCSchoolModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolModelView.swift; sourceTree = "<group>"; };
 		4D30EF3D2658968D00BF657E /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
+		4D4340532659A31C004AC3C3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4D4340552659AA17004AC3C3 /* NYSchoolLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSchoolLocation.swift; sourceTree = "<group>"; };
 		4D676E802657403900DCFCFF /* 20210520-ArtiKarnik-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20210520-ArtiKarnik-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D676E832657403900DCFCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D676E852657403900DCFCFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			children = (
 				4D676EA7265742DD00DCFCFF /* HomeViewController.swift */,
 				4D676EA92657438A00DCFCFF /* DetailViewController.swift */,
+				4D4340532659A31C004AC3C3 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			children = (
 				4D676EAB265754CE00DCFCFF /* NYSchool.swift */,
 				4D30EF382658613C00BF657E /* NYCSchoolModelView.swift */,
+				4D4340552659AA17004AC3C3 /* NYSchoolLocation.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -266,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4340562659AA17004AC3C3 /* NYSchoolLocation.swift in Sources */,
 				4D676E842657403900DCFCFF /* AppDelegate.swift in Sources */,
 				4D676EAC265754CE00DCFCFF /* NYSchool.swift in Sources */,
 				4D676EAA2657438A00DCFCFF /* DetailViewController.swift in Sources */,
+				4D4340542659A31C004AC3C3 /* MapViewController.swift in Sources */,
 				4D30EF3E2658968D00BF657E /* global.swift in Sources */,
 				4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */,
 				4D30EF262658243E00BF657E /* nySchoolTableViewCell.swift in Sources */,
