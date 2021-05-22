@@ -1,8 +1,7 @@
 import UIKit
 
 class NYCSchoolModelView: NSObject {
-   
-    func getSchoolList(_ url: String, completion: @escaping (Result<[NYSchool], Error>) -> Void) {
+    func fetchData(_ url: String, completion: @escaping (Result<[NYSchool], Error>) -> Void) {
         guard let url = URL(string: url)else {
             return;
         }

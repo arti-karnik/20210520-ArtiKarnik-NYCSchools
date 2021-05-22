@@ -1,16 +1,17 @@
 
-struct NYSchool: Codable{
+struct NYSchool: Codable, Hashable{
     var dbn: String;
     var schoolName: String;
     var address: String;
+    var description: String;
     var phone: String;
     var city: String;
     var state: String;
     var zip: String;
     var startTime: String;
     var endTime: String;
+    var fullAddress: String;
     var website: String;
-    var description: String;
     var SATtakers: String;
     var SATcriticalReadingAvgScore: String;
     var SATmathAvgScore: String;
@@ -35,21 +36,22 @@ struct NYSchool: Codable{
     }
     init(from decoder: Decoder) throws{
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        dbn = try container.decode(String.self, forKey: .dbn)
-        schoolName = try container.decode(String.self, forKey: .schoolName)
-        address = (try container.decodeIfPresent(String.self, forKey: .address)) ?? "Unknown Address"
-        description = (try container.decodeIfPresent(String.self, forKey: .description)) ?? "Unknown"
-        phone = (try container.decodeIfPresent(String.self, forKey: .phone)) ?? "NA"
-        city = (try container.decodeIfPresent(String.self, forKey: .city)) ?? "NA"
-        state = (try container.decodeIfPresent(String.self, forKey: .state)) ?? "NA"
-        website = (try container.decodeIfPresent(String.self, forKey: .website)) ?? "NA"
-        zip = (try container.decodeIfPresent(String.self, forKey: .zip)) ?? "NA"
-        startTime = (try container.decodeIfPresent(String.self, forKey: .startTime)) ?? "NA"
-        endTime = (try container.decodeIfPresent(String.self, forKey: .endTime)) ?? "NA"
-        SATtakers = (try container.decodeIfPresent(String.self, forKey: .SATtakers)) ?? "NA"
+        dbn         =  try container.decode(String.self, forKey: .dbn)
+        schoolName  =  try container.decode(String.self, forKey: .schoolName)
+        address     =  (try container.decodeIfPresent(String.self, forKey: .address)) ?? "NA"
+        description =  (try container.decodeIfPresent(String.self, forKey: .description)) ?? "NA"
+        phone       =  (try container.decodeIfPresent(String.self, forKey: .phone)) ?? "NA"
+        city        =  (try container.decodeIfPresent(String.self, forKey: .city)) ?? "NA"
+        state       =  (try container.decodeIfPresent(String.self, forKey: .state)) ?? "NA"
+        website     =  (try container.decodeIfPresent(String.self, forKey: .website)) ?? "NA"
+        zip         = (try container.decodeIfPresent(String.self, forKey: .zip)) ?? "NA"
+        startTime   = (try container.decodeIfPresent(String.self, forKey: .startTime)) ?? "NA"
+        endTime     = (try container.decodeIfPresent(String.self, forKey: .endTime)) ?? "NA"
+        SATtakers   = (try container.decodeIfPresent(String.self, forKey: .SATtakers)) ?? "NA"
         SATcriticalReadingAvgScore = (try container.decodeIfPresent(String.self, forKey: .SATcriticalReadingAvgScore)) ?? "NA"
         SATmathAvgScore = (try container.decodeIfPresent(String.self, forKey: .SATmathAvgScore)) ?? "NA"
         SATwritingAvgScore = (try container.decodeIfPresent(String.self, forKey: .SATwritingAvgScore)) ?? "NA"
+        fullAddress = address + city + " " + state + " " + zip
     }
 }
 

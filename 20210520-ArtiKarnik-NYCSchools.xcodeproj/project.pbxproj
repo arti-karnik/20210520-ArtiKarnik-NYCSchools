@@ -73,17 +73,17 @@
 		4D30EF2726582AA200BF657E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D30EF2826582AA900BF657E /* CustomCell */,
+				4D30EF2826582AA900BF657E /* Custom */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4D30EF2826582AA900BF657E /* CustomCell */ = {
+		4D30EF2826582AA900BF657E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				4D30EF252658243E00BF657E /* nySchoolTableViewCell.swift */,
 			);
-			path = CustomCell;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		4D30EF312658501400BF657E /* Networking */ = {
