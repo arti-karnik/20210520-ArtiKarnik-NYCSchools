@@ -9,13 +9,16 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet var schoolName: UILabel!
+    @IBOutlet var schoolDescription: UILabel!
     @IBOutlet var dbn: UILabel!
     @IBOutlet var criticalSATscore: UILabel!
     @IBOutlet var noOfSATtakers: UILabel!
     @IBOutlet var mathAvgSATscore: UILabel!
     @IBOutlet var writingAvgSATscore: UILabel!
-    @IBOutlet var schoolName: UILabel!
-    var nySAT: [NYSAT]?
+    
+
+    var nySAT: [NYSchool]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +30,14 @@ class DetailViewController: UIViewController {
         }
     }
     
-    func showdetails(_ nySAT: [NYSAT]) {
-        print("in details")
+    func showdetails(_ nySAT: [NYSchool]) {
         print(nySAT)
         dbn.text = nySAT[0].dbn
         schoolName.text = nySAT[0].schoolName
+        schoolDescription.text = nySAT[0].description
         mathAvgSATscore.text = nySAT[0].SATmathAvgScore
         criticalSATscore.text = nySAT[0].SATcriticalReadingAvgScore
         noOfSATtakers.text = nySAT[0].SATtakers
         writingAvgSATscore.text = nySAT[0].SATwritingAvgScore
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

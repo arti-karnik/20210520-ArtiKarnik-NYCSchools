@@ -21,8 +21,6 @@ class nySchoolTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     func configure(_ nyschool: NYSchool) {
-        print("configure")
-        print(nyschool)
         schoolName.text = nyschool.schoolName
         schoolAddress.text = nyschool.address
         schoolPhone.text = nyschool.phone

@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4D30EF262658243E00BF657E /* nySchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF252658243E00BF657E /* nySchoolTableViewCell.swift */; };
-		4D30EF2A26582CFD00BF657E /* NYSAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF2926582CFD00BF657E /* NYSAT.swift */; };
+		4D30EF332658503200BF657E /* NetworkManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF322658503200BF657E /* NetworkManage.swift */; };
+		4D30EF392658613C00BF657E /* NYCSchoolModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF382658613C00BF657E /* NYCSchoolModelView.swift */; };
+		4D30EF3E2658968D00BF657E /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D30EF3D2658968D00BF657E /* global.swift */; };
 		4D676E842657403900DCFCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E832657403900DCFCFF /* AppDelegate.swift */; };
 		4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D676E852657403900DCFCFF /* SceneDelegate.swift */; };
 		4D676E8B2657403900DCFCFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D676E892657403900DCFCFF /* Main.storyboard */; };
@@ -32,7 +34,9 @@
 
 /* Begin PBXFileReference section */
 		4D30EF252658243E00BF657E /* nySchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nySchoolTableViewCell.swift; sourceTree = "<group>"; };
-		4D30EF2926582CFD00BF657E /* NYSAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYSAT.swift; sourceTree = "<group>"; };
+		4D30EF322658503200BF657E /* NetworkManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManage.swift; sourceTree = "<group>"; };
+		4D30EF382658613C00BF657E /* NYCSchoolModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolModelView.swift; sourceTree = "<group>"; };
+		4D30EF3D2658968D00BF657E /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 		4D676E802657403900DCFCFF /* 20210520-ArtiKarnik-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20210520-ArtiKarnik-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D676E832657403900DCFCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D676E852657403900DCFCFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,22 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		4D30EF312658501400BF657E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4D30EF322658503200BF657E /* NetworkManage.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4D30EF3C2658967B00BF657E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D30EF3D2658968D00BF657E /* global.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4D676E772657403900DCFCFF = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,8 @@
 		4D676E822657403900DCFCFF /* 20210520-ArtiKarnik-NYCSchools */ = {
 			isa = PBXGroup;
 			children = (
+				4D30EF3C2658967B00BF657E /* Helpers */,
+				4D30EF312658501400BF657E /* Networking */,
 				4D30EF2726582AA200BF657E /* Views */,
 				4D676EA62657415900DCFCFF /* Modal */,
 				4D676EA52657415000DCFCFF /* Controller */,
@@ -138,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				4D676EAB265754CE00DCFCFF /* NYSchool.swift */,
-				4D30EF2926582CFD00BF657E /* NYSAT.swift */,
+				4D30EF382658613C00BF657E /* NYCSchoolModelView.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -247,9 +269,11 @@
 				4D676E842657403900DCFCFF /* AppDelegate.swift in Sources */,
 				4D676EAC265754CE00DCFCFF /* NYSchool.swift in Sources */,
 				4D676EAA2657438A00DCFCFF /* DetailViewController.swift in Sources */,
+				4D30EF3E2658968D00BF657E /* global.swift in Sources */,
 				4D676E862657403900DCFCFF /* SceneDelegate.swift in Sources */,
 				4D30EF262658243E00BF657E /* nySchoolTableViewCell.swift in Sources */,
-				4D30EF2A26582CFD00BF657E /* NYSAT.swift in Sources */,
+				4D30EF332658503200BF657E /* NetworkManage.swift in Sources */,
+				4D30EF392658613C00BF657E /* NYCSchoolModelView.swift in Sources */,
 				4D676EA8265742DD00DCFCFF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
