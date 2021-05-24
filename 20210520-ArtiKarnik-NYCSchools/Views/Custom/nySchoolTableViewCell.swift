@@ -9,7 +9,6 @@
 import UIKit
 
 class nySchoolTableViewCell: UITableViewCell {
-
     @IBOutlet var schoolName: UILabel!
     @IBOutlet var schoolAddress: UILabel!
     @IBOutlet var schoolPhone: UILabel!
@@ -19,13 +18,14 @@ class nySchoolTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    // Custom tableview cell configure
     func configure(_ nyschool: NYSchool) {
         schoolName.text = nyschool.schoolName
         schoolAddress.text = nyschool.fullAddress
         schoolPhone.text = nyschool.phone
         website.text = nyschool.website
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

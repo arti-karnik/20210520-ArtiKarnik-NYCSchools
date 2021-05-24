@@ -16,10 +16,10 @@ class DetailViewController: UIViewController {
     @IBOutlet var noOfSATtakers: UILabel!
     @IBOutlet var mathAvgSATscore: UILabel!
     @IBOutlet var writingAvgSATscore: UILabel!
-    
     var nySAT: [NYSchool]?
     var nySchoolInfo: [NYSchool]?
 
+    //MARK: ViewLoad methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,6 +31,8 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //MARK: Show Details
+    // Method to show details on Detail View controller
     func showdetails(_ nySAT: [NYSchool]) {
         print(nySAT)
         dbn.text = nySAT[0].dbn
@@ -39,6 +41,9 @@ class DetailViewController: UIViewController {
         noOfSATtakers.text = nySAT[0].SATtakers
         writingAvgSATscore.text = nySAT[0].SATwritingAvgScore
     }
+    
+    //MARK: Button Events
+    // Method called when user clicks on 'Show Map' button
     @IBAction func showMap(_ sender: Any) {
     let mapVC = self.storyboard?.instantiateViewController(withIdentifier: "MapView") as? MapViewController
         mapVC?.nySchoolInfo = nySchoolInfo

@@ -4,7 +4,7 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var nySchoolInfo: [NYSchool]?
-    var locationObj: location = location()
+    var locationObj: NYSchoolLocation = NYSchoolLocation()
 
     @IBOutlet weak var Map: MKMapView! {
         didSet {
@@ -16,6 +16,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             Map.isZoomEnabled = true
         }
     }
+    //MARK: View DidLoad Method
     override func viewDidLoad() {
         super.viewDidLoad()
         addAnnotation()
@@ -23,7 +24,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 }
 
 extension MapViewController {
-    
+    //MARK: Add Annotaition on the Map
     func addAnnotation()  {
       
         let annotation = locationObj.createAnnotation(latitude: nySchoolInfo?[0].latitude ?? "0.0", longitude: nySchoolInfo?[0].longitude ?? "0.0", title: nySchoolInfo?[0].schoolName ?? "")
@@ -31,6 +32,5 @@ extension MapViewController {
                  
         Map.layoutMargins = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
         Map.showAnnotations(Map.annotations, animated: true)
-        
     }
 }

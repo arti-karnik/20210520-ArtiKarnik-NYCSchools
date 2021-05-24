@@ -11,17 +11,17 @@ import Foundation
 
 
 class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    var searching = false
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tblView: UITableView!
-
     var nySchoolList: [NYSchool]?
     var nySAT: [NYSchool]?
     var searchResults: [NYSchool]?
+    var search: NYSchoolSearch = NYSchoolSearch()
+    var networkManager: NetworkManager = NetworkManager()
+    var searching = false
 
-    var modalObject: NYCSchoolModelView = NYCSchoolModelView()
-    
+    //MARK: View Did Load method
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "NYC School"
@@ -31,12 +31,15 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
         tblView.rowHeight = UITableView.automaticDimension
         getSchoolData()
     }
+    //MARK: API call
+    /// Method to call API to get school info and  school SAT info
     func getSchoolData() {
         self.getdata()
         self.getSATdata()
     }
+    /// Method to call API to get school info
     func getdata() {
-        modalObject.fetchData(global.schoolURL){  (result) in
+        networkManager.fetchData(global.schoolURL){  (result) in
             switch result {
                 case .success(let data):
                     DispatchQueue.main.async{
@@ -50,8 +53,9 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
             }
         }
     }
+    /// Method to call API to get school SAT info
     func getSATdata() {
-        modalObject.fetchData(global.satURL){
+        networkManager.fetchData(global.satURL){
             (result) in
             switch result {
                 case .success(let data):
@@ -63,6 +67,7 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
             }
         }
     }
+    /// Method to show Alert message
     func alert(_ message:String?) {
         let alert = UIAlertController(title: "Alert" , message: message ?? "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
@@ -71,6 +76,8 @@ class HomeViewController: UIViewController , UITableViewDelegate, UITableViewDat
 }
 
 extension HomeViewController  {
+    //MARK: TableView Delegate methods
+    // Table view methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
             return searchResults?.count ?? 0
@@ -100,12 +107,12 @@ extension HomeViewController  {
 }
 
 extension HomeViewController {
+    //MARK: Search bar Delegate method
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searching = true
+        searchResults = search.filterResults(searchText, nySchoolList!)
         tblView.reloadData()
-        searchResults = modalObject.filterResults(searchText, nySchoolList!)
     }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         tblView.reloadData()

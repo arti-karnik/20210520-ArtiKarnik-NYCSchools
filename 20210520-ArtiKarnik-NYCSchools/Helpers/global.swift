@@ -9,6 +9,7 @@
 import UIKit
 
 struct global {
+    // Static url
     static let schoolURL: String = "https://data.cityofnewyork.us/resource/s3k6-pzi2.json"
     static let satURL: String = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json"
     static let NA: String = "Not Available"
