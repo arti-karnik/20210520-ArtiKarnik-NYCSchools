@@ -23,7 +23,7 @@ SAT data here: https://data.cityofnewyork.us/Education/SAT-Results/f9bf-2cp4
 Install Xcode 
 
 ## Demo
-![](./images/myGif.gif?raw=true)
+![](./images/myGif.gif?raw=true) <br>
 <img src="./images/SS1.png">
 <img src="./images/SS2.png">
 <img src="./images/SS3.png">
